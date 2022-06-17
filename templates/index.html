@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BOOKS!</title>
+  <!-- https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l <- table CSS -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="{{ url_for('static', filename='js/booksTable.js') }}"></script>
+</head>
+<body>
+
+  <div class="w3-container w3-teal centre">
+  <h1>BOOKS!</h1>
+  </div>
+
+
+  <table id="bookTable" class="styled-table"> </table>
+
+  <script>
+      var entries = JSON.parse('{{ g.jdump|safe }}');
+      createTable(entries);
+  </script>
+
+</body>
+</html>
