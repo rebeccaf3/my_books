@@ -49,7 +49,7 @@ function createTable(tableData) {
         var linktext = document.createTextNode("Read more");
         hyperlink.appendChild(linktext);
         hyperlink.title = "More info";
-        hyperlink.href = HOMEURL + "books/" + bookID;
+        hyperlink.href = HOMEURL + "book" + bookID;
         finalCell.appendChild(hyperlink);
 
         row.appendChild(finalCell);
